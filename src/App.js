@@ -6,7 +6,9 @@ import { Program, Provider, web3 } from "@project-serum/anchor";
 
 import idl from "./idl.json";
 // import kp from "./keypair.json";
-const kp = JSON.parse(process.env.KEY_PAIR);
+
+// TODO: but still exposed on the frontend?
+const kp = JSON.parse(process.env.REACT_APP_KEY_PAIR);
 
 // SystemProgram is a reference to the Solana runtime!
 const { SystemProgram, Keypair } = web3;

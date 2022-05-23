@@ -1,0 +1,17 @@
+[features]
+seeds = false
+# [programs.localnet]
+[programs.devnet]
+# myepicproject = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+myepicproject = "8WsCFs77wH6K6AiBu56CsZCHrDwNFyfVYiZNW7qRxDXX"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+# cluster = "localnet"
+cluster = "devnet"
+wallet = "/Users/Nobu/.config/solana/id.json"
+
+[scripts]
+test = "yarn run mocha -t 1000000 tests/"

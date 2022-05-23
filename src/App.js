@@ -5,12 +5,12 @@ import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
 import { Program, Provider, web3 } from "@project-serum/anchor";
 
 import idl from "./idl.json";
-import kp from "./keypair.json";
+// import kp from "./keypair.json";
+const kp = JSON.parse(process.env.KEY_PAIR);
 
 // SystemProgram is a reference to the Solana runtime!
 const { SystemProgram, Keypair } = web3;
 
-// TODO: is it ok to expose the secret on the frontend🤔
 const arr = Object.values(kp._keypair.secretKey);
 const secret = new Uint8Array(arr);
 const baseAccount = web3.Keypair.fromSecretKey(secret);
